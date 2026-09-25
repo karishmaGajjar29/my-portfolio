@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 85px;
+}
+.about-copy p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin: 0 0 17px;
+}
+.about-note {
+  font-size: 13px;
+  font-weight: 650;
+  padding-top: 7px;
+}
+@media (max-width: 1050px) {
+  .about {
+    gap: 40px;
+  }
+}
+@media (max-width: 760px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

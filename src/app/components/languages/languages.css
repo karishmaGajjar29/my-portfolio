@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+.languages {
+  display: flex;
+  gap: 26px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 32px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.languages strong {
+  color: var(--text);
+  margin-right: 10px;
+}
+@media (max-width: 540px) {
+  .languages {
+    gap: 16px;
+  }
+  .languages strong {
+    width: 100%;
+  }
+}

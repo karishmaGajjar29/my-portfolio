@@ -1,0 +1,38 @@
+:host {
+  display: block;
+}
+.portfolio {
+  --bg: #faf8f5;
+  --soft: #f0edf7;
+  --text: #262036;
+  --muted: #6b6478;
+  --line: #dfd9e9;
+  --blue: #7544ce;
+  --card: #ffffff;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  --accent: #e2f3a7;
+}
+.portfolio.dark {
+  --bg: #171321;
+  --soft: #211b2f;
+  --text: #f5efff;
+  --muted: #bdb1cc;
+  --line: #3c324f;
+  --blue: #bf9af8;
+  --card: #272033;
+  color-scheme: dark;
+  --accent: #e2f3a7;
+}
+.skip-link {
+  position: fixed;
+  top: -80px;
+  left: 12px;
+  padding: 12px;
+  background: var(--card);
+  z-index: 20;
+}
+.skip-link:focus {
+  top: 10px;
+}

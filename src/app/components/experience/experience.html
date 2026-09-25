@@ -1,0 +1,23 @@
+<section id="experience" class="section container">
+  <p class="eyebrow">03 / MY JOURNEY</p>
+  <h2>Learning by <span class="muted">building.</span></h2>
+  <div class="timeline">
+    @for (job of data.experience; track job.role) {
+      <article class="experience-row">
+        <div class="experience-meta">
+          <p>{{ job.dates }}</p>
+          <strong>{{ job.company }}</strong>
+        </div>
+        <div class="experience-detail">
+          <h3>{{ job.role }}</h3>
+          <p class="technology">{{ job.stack }}</p>
+          <ul>
+            @for (detail of job.details; track detail) {
+              <li>{{ detail }}</li>
+            }
+          </ul>
+        </div>
+      </article>
+    }
+  </div>
+</section>

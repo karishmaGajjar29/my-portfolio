@@ -1,1 +1,148 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  touch-action: manipulation;
+}
+img {
+  max-width: 100%;
+}
+::selection {
+  background: #d9c5fa;
+  color: #262036;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Shared portfolio typography, spacing, and reusable elements. */
+
+.container {
+  width: min(1160px, calc(100% - 80px));
+  margin-inline: auto;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+.brand {
+  font-size: 37px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+.brand span,
+.blue {
+  color: var(--blue);
+}
+a:hover {
+  color: var(--blue);
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.3px;
+  color: var(--blue);
+  margin: 0 0 24px;
+}
+.section-intro {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.section {
+  padding-block: 96px;
+  scroll-margin-top: 80px;
+}
+h2 {
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -1.6px;
+  margin: 0 0 20px;
+}
+.muted {
+  color: var(--blue);
+}
+.text-link {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--blue);
+  display: inline-block;
+  padding-block: 14px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.soft-section {
+  background: var(--soft);
+  border-block: 1px solid var(--line);
+}
+.section-intro {
+  margin-top: -7px;
+  margin-bottom: 34px;
+}
+h3 {
+  font-size: 17px;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.badges span {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 6px 10px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  background: var(--soft);
+}
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 5px;
+}
+@media (max-width: 1050px) {
+  .container {
+    width: calc(100% - 48px);
+  }
+}
+@media (max-width: 760px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+  .section {
+    padding-block: 64px;
+    scroll-margin-top: 68px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+h1,
+h2,
+h3,
+.brand {
+  font-family: 'Syne', 'Segoe UI', sans-serif;
+  font-weight: 700;
+}

@@ -1,0 +1,17 @@
+<section id="contact" class="container contact-section">
+  <div class="contact-panel">
+    <p class="eyebrow">06 / SAY HELLO</p>
+    <h2>Have something in mind?<br /><span>Let's talk.</span></h2>
+    <p>
+      I'd love to hear about your team, your next project,<br />
+      or just share ideas about development.
+    </p>
+    <a class="contact-email" [href]="'mailto:' + data.email">{{ data.email }} ↗</a>
+    <div class="contact-actions">
+      <button (click)="copyEmail()">Copy email ▣</button
+      ><a [href]="data.github" target="_blank" rel="noopener noreferrer">GitHub ↗</a
+      ><a [href]="data.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+    <p class="copy-status" role="status">{{ copyStatus() }}</p>
+  </div>
+</section>

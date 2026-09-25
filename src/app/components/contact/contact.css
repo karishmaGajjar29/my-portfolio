@@ -1,0 +1,77 @@
+:host {
+  display: block;
+}
+
+.contact-section {
+  scroll-margin-top: 100px;
+  padding-bottom: 60px;
+}
+.contact-panel {
+  text-align: center;
+  background: radial-gradient(ellipse at 0 100%, #8254cc 0, transparent 60%), #392454;
+  color: #fff;
+  border-radius: 30px;
+  padding: 76px 25px 32px;
+  box-shadow: 0 12px 0 var(--line);
+}
+.contact-panel .eyebrow {
+  color: #ddc5ff;
+}
+.contact-panel h2 {
+  font-size: clamp(34px, 4.8vw, 62px);
+}
+.contact-panel h2 span {
+  color: #e2f3a7;
+}
+.contact-panel > p:not(.eyebrow) {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #e0d5ec;
+}
+.contact-email {
+  display: inline-block;
+  font-size: clamp(16px, 2.5vw, 27px);
+  margin: 17px 0 24px;
+  border-bottom: 1px solid #b69bce;
+  padding-bottom: 9px;
+  overflow-wrap: anywhere;
+}
+.contact-panel a:hover {
+  color: #e2f3a7;
+}
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  font-size: 12px;
+  align-items: center;
+}
+.contact-actions button {
+  border: 1px solid #e2f3a7;
+  color: #30233f;
+  background: #e2f3a7;
+  border-radius: 24px;
+  padding: 12px 16px;
+}
+.contact-actions a {
+  padding-block: 14px;
+}
+.copy-status {
+  min-height: 24px;
+}
+@media (max-width: 760px) {
+  .contact-panel h2 {
+    font-size: 34px;
+  }
+  .contact-panel {
+    padding: 48px 20px 20px;
+  }
+  .contact-section {
+    padding-bottom: 35px;
+  }
+}
+@media (max-width: 540px) {
+  .contact-actions {
+    gap: 18px;
+  }
+}

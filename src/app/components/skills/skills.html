@@ -1,0 +1,20 @@
+<section id="skills" class="section soft-section">
+  <div class="container">
+    <p class="eyebrow">02 / MY TOOLKIT</p>
+    <h2>The tools behind <span class="muted">the work.</span></h2>
+    <p class="section-intro">A foundation across frontend, backend, and everything in between.</p>
+    <div class="skills-grid">
+      @for (skill of data.skills; track skill.title; let index = $index) {
+        <article class="skill-card">
+          <span class="number">0{{ index + 1 }}</span>
+          <h3>{{ skill.title }}</h3>
+          <div class="badges">
+            @for (item of skill.items; track item) {
+              <span>{{ item }}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

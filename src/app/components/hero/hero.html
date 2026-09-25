@@ -1,0 +1,53 @@
+<section class="hero container" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="dot"></span> HELLO, I'M KARISHMA</p>
+    <h1 id="hero-title">
+      Creative mind.<br /><span>Developer</span><br />at heart<span class="period">.</span>
+    </h1>
+    <p class="intro">
+      I'm <strong>Karishma Gajjar</strong>, a full stack developer turning complex ideas into
+      thoughtful, easy-to-use web experiences.
+    </p>
+    <div class="actions">
+      <a class="button primary" href="#projects"
+        >Discover my work <span aria-hidden="true">↗</span></a
+      >
+      <a class="button secondary" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="hero-links">
+      <span>{{ data.location }}</span
+      ><a [href]="data.github" target="_blank" rel="noopener noreferrer">GitHub ↗</a
+      ><a [href]="data.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-label="Karishma's developer profile">
+    <span class="art-caption">A LITTLE LOGIC. A LOT OF CURIOSITY.</span>
+    <div class="profile-card">
+      <div class="card-top"><span>KG — PORTFOLIO</span><span aria-hidden="true">↗</span></div>
+      @if (data.photo) {
+        <img
+          class="avatar photo"
+          [src]="data.photo"
+          alt="Karishma Gajjar"
+          width="300"
+          height="300"
+        />
+      } @else {
+        <div class="avatar" aria-hidden="true">
+          <span class="monogram">kg.</span><span class="avatar-orbit"></span>
+        </div>
+      }
+      <div class="card-bottom">
+        <h2>{{ data.name }}</h2>
+        <p>FULL STACK DEVELOPER</p>
+      </div>
+    </div>
+    <span class="floating-tag tag-primary"><span class="tag-icon" aria-hidden="true">.NET</span> ASP.NET Core</span>
+    <span class="floating-tag tag-angular"><span class="tag-icon angular-icon" aria-hidden="true">A</span> Angular</span>
+    <span class="floating-tag tag-dotnet"
+      ><span aria-hidden="true">&lt;/&gt;</span> Ideas → real applications</span
+    >
+    <span class="art-spark" aria-hidden="true">✳</span>
+    <span class="art-label">Built with care,<br />one line at a time.</span>
+  </div>
+</section>

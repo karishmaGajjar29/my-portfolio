@@ -1,0 +1,30 @@
+<header>
+  <nav class="container nav" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Karishma Gajjar home">kg<span>.</span></a>
+    <div class="nav-links" id="navigation" [class.open]="menuOpen()">
+      @for (link of navigation; track link) {
+        <a [href]="'#' + link.toLowerCase()" (click)="menuOpen.set(false)">{{ link }}</a>
+      }
+    </div>
+    <div class="nav-actions">
+      <button
+        class="icon-button"
+        (click)="themeToggle.emit()"
+        [attr.aria-label]="dark() ? 'Switch to light theme' : 'Switch to dark theme'"
+        [attr.aria-pressed]="dark()"
+      >
+        {{ dark() ? '☀' : '☾' }}
+      </button>
+      <button
+        id="menu-toggle"
+        class="icon-button menu-toggle"
+        aria-controls="navigation"
+        [attr.aria-expanded]="menuOpen()"
+        (click)="toggleMenu()"
+        aria-label="Toggle navigation"
+      >
+        {{ menuOpen() ? '×' : '☰' }}
+      </button>
+    </div>
+  </nav>
+</header>
