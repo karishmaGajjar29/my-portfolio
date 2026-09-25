@@ -23,15 +23,15 @@ Alongside my work at Technobliss, I am currently studying in Semester 3 of the M
 - Email contact and a copy-email action.
 - Keyboard focus styles, a skip-to-content link, and reduced-motion support.
 - Configurable photo, resume download, project screenshots, source links, and demo links.
-- Angular server-rendering infrastructure with the portfolio route prerendered at build time.
+- Static HTML with the portfolio route prerendered at build time.
 
 ## Website Technology
 
 | Area | Technologies |
 | --- | --- |
 | Frontend | Angular 21, TypeScript, HTML, CSS |
-| Rendering | Angular SSR and prerendering |
-| Server | Node.js, Express |
+| Rendering | Angular build-time prerendering |
+| Hosting | Static files on Cloudflare Pages |
 | Testing | Vitest, Angular TestBed, jsdom |
 | Typography | Syne and DM Sans via Google Fonts |
 
@@ -75,9 +75,17 @@ Open [http://localhost:4200](http://localhost:4200). The development server relo
 | `npm run build` | Create the production build |
 | `npm test -- --watch=false` | Run the automated tests once |
 | `npm run watch` | Rebuild in development mode as files change |
-| `npm run serve:ssr:my-portfolio` | Serve the production build after building |
 
-The production build is written to `dist/my-portfolio/`. The production server defaults to [http://localhost:4000](http://localhost:4000) and accepts a `PORT` environment variable.
+The production build is written to `dist/my-portfolio/`, with `index.html` directly inside that directory. No production Node.js server is required.
+
+### Deploy to Cloudflare Pages
+
+Use the existing Cloudflare Pages project with these build settings:
+
+- Build command: `npm run build`
+- Build output directory: `dist/my-portfolio`
+
+The Angular configuration explicitly removes the default `browser` output subdirectory. Publish the directory containing `index.html`; publishing its parent can cause a 404 even when the build succeeds. Push these changes to the connected Git production branch to trigger a new deployment.
 
 ## Component Structure
 
